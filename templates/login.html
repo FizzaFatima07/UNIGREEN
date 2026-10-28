@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In — UniGreen</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="/" class="logo">🌱 UniGreen</a>
+    <nav>
+      <a href="/signup">Sign Up</a>
+    </nav>
+  </header>
+
+  <main class="auth-page">
+    <form class="auth-card" method="post" action="/login">
+      <h1>Welcome back</h1>
+
+      {% if error %}
+        <p class="form-error">{{ error }}</p>
+      {% endif %}
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit" class="btn btn-primary">Log In</button>
+
+      <p class="auth-switch">New here? <a href="/signup">Create an account</a></p>
+    </form>
+  </main>
+
+</body>
+</html>

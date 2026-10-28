@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — UniGreen</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="/" class="logo">🌱 UniGreen</a>
+    <nav>
+      <a href="/logout">Log Out</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <h1>Welcome, {{ user.full_name }}.</h1>
+    <p>You currently have <strong>{{ user.green_points }} Green Points</strong>.
+       Log your recycling to start earning more.</p>
+    <div class="hero-buttons">
+      <a href="#" class="btn btn-primary">Log Bottles</a>
+    </div>
+  </main>
+
+</body>
+</html>

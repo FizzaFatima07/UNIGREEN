@@ -1,0 +1,149 @@
+:root {
+  --forest: #2d4a34;
+  --leaf: #5c8a52;
+  --leaf-light: #a9c99a;
+  --beige: #f1e9d8;
+  --beige-deep: #e4d7bc;
+  --paper: var(--beige);
+  --ink: #2b2620;
+  --muted: #6b6250;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+/* --- Navbar --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2.5rem;
+  background: var(--forest);
+}
+
+.navbar .logo {
+  color: var(--paper);
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.navbar nav a {
+  color: var(--leaf-light);
+  text-decoration: none;
+  margin-left: 1.75rem;
+  font-size: 0.95rem;
+}
+
+.navbar nav a:hover,
+.navbar nav a:focus-visible {
+  color: var(--paper);
+}
+
+/* --- Hero --- */
+.hero {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 4rem;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--forest);
+  line-height: 1.15;
+  margin-bottom: 1.1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 50ch;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background: var(--leaf);
+  color: var(--paper);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: var(--forest);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--forest);
+  border: 1.5px solid var(--leaf);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background: var(--leaf-light);
+}
+
+/* --- Feature cards --- */
+.features {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: var(--beige-deep);
+  border-top: 3px solid var(--leaf);
+  border-radius: 8px;
+  padding: 1.25rem 1.25rem 1.5rem;
+}
+
+.feature-card h3 {
+  font-size: 1.1rem;
+  color: var(--forest);
+  margin-bottom: 0.4rem;
+}
+
+.feature-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--beige-deep);
+}
+
+/* --- Responsive --- */
+@media (max-width: 640px) {
+  .hero h1 { font-size: 2rem; }
+  .features { grid-template-columns: 1fr; }
+  .navbar { padding: 1rem 1.25rem; }
+}
